@@ -254,6 +254,9 @@ ul.row {
 .section-hero {
     background-size: 90rem auto;
 }
+.header {
+  padding: var(--header-padding);
+}
 .header-logo {
     position: var(--header-logo-position);
 }
