@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style-type: none;
     text-align: center;
 }
-.nav.nav-item {
+.nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
@@ -139,9 +139,9 @@ h1, h2, h3, h4, h5, h6 {
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
 }
-.nav.nav-link {
+.nav .nav-link {
     display: block;
-    padding: 0.5rem auto;
+    padding: 0.5rem 1rem;
 }
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
