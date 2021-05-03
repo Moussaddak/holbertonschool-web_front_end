@@ -1,0 +1,12 @@
+$color: #3D3D3D;
+$backgournd-color: #6D6D6D;
+body {
+    color: $color;
+    background-color: $backgournd-color;
+}
+p {
+    color: $color;
+}
+h2 {
+    background-color: $backgournd-color;
+}
