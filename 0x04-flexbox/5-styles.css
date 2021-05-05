@@ -197,12 +197,7 @@
     width: calc((100% / 2) - 2rem);
   }
   
-  /* Navbar
-      ============================= */
-  
-  .navbar-menu {
-    float: right;
-  }
+  /* Navbar ============================= */
   
   .nav {
     margin: 0;
@@ -249,10 +244,12 @@
   
   /* Header
       ============================= */
+
   .header-container {
         display: flex;
         justify-content: space-between;
     }
+
   .header {
     padding: var(--header-padding);
          position: relative;
