@@ -1,0 +1,48 @@
+:root {
+  --color-red: #e0003c;
+  --color-crismon: #bc1340;
+  --color-silver: #8c8c8c;
+}
+
+body > div:first-child {
+    border-color: var(--color-red) !important;
+}
+
+.btn-outline-primary {
+    color: var(--color-red) !important;
+    border-color: var(--color-red) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: var(--color-crismon) !important;
+    color: white !important;
+    border-color: white;
+}
+
+.btn-primary {
+    background-color: var(--color-red) !important;
+    border: var(--color-red) !important;
+}
+
+a, a:hover, a:focus {
+    color: var(--color-red) !important;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-header {
+    border-top-right-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    color: white !important;
+    background-color: var(--color-red) !important;
+}
+
+.card-container, header, footer {
+    border-color: var(--color-red) !important;
+}
+
+.text-muted {
+    color: var(--color-silver) !important;
+}
