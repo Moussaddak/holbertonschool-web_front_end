@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Task 5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+
+            let tab = new Map();
+            tab["firstName"] = ['Guillaume', 'Arielle', 'Fanette', 'Gerard', 'Victor'];
+            tab["lastName"] = ['Salva', 'Snizt', 'Snizt', 'Snizt', 'Salva'];
+
+
+            function createFamilyTree() {
+                let $table = $('<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead></table>');
+                $('body').append($table);
+                $table.append('<tbody></tbody>');
+            }
+
+            function addNewMember(firstName, lastName) {
+                let $row = $(`<tr><td>${firstName}</td><td>${lastName}</td></tr>`);
+                let $crossRow = $('<td>(x)</td>');
+                $crossRow.css('background', 'orange');
+                $row.append($crossRow);
+                $('table').find('tbody').append($row);
+                $crossRow.on("click", function () {
+                    $row.remove();
+                });
+                        }
+
+            createFamilyTree();
+
+            for (let i = 0; i < 5; i++) {
+                addNewMember(tab['firstName'][i], tab['lastName'][i]);
+            }
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
