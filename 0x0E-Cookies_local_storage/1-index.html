@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Create cookie with expiration date and specific path</title>
+</head>
+
+<body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button>
+    <br>
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+
+
+
+    <script  type="application/javascript">
+    
+    function setCookies() {
+            const name = document.getElementById('firstname');
+            const email = document.getElementById('email');
+
+            let d = new Date();
+            d.setTime(d.getTime() + (10 * (24 * 60 * 60 * 1000)));
+
+            document.cookie = `firstname=${name.value};`;
+            document.cookie = `email=${email.value};`;
+            document.cookie = `expires=${d};`;
+        }
+
+        function showCookies() {
+            let p = document.createElement('p');
+            p.innerHTML = `Cookies: ${decodeURIComponent(document.cookie)};`;
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>
